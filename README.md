@@ -4,27 +4,9 @@ A comprehensive Todo-List application with a React frontend and a C# server back
 
 ## Table of Contents
 
-- [Project Structure](#project-structure)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Project Structure
-root/
-├── client/
-│ ├── README.md
-│ ├── src/
-│ ├── public/
-│ └── package.json
-├── server/
-│ ├── README.md
-│ ├── src/
-│ ├── appsettings.json
-│ └── ToDoApp.csproj
-├── .gitignore
-└── README.md
 
 ## Features
 
@@ -81,11 +63,3 @@ root/
     ```
 
 3. Open your browser and navigate to `http://localhost:3000`
-
-## Contributing
-
-Contributions are welcome! Please create a pull request or open an issue to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
