@@ -40,7 +40,7 @@ To run the server, ensure you have the following installed:
 
 2. **Enter the folder**:
    ```bash
-   cd ToDoApp/server/WebApplication4
+   cd ToDoApp/server-side
    ```
 
 3. **Install dependencies**:
