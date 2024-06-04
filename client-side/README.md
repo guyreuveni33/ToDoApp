@@ -52,4 +52,4 @@ Ensure the backend server is running and update the API base URL in your service
 Below is a screenshot of the Todo-List client interface, showcasing its clean and user-friendly design:
 
 
-![image](https://github.com/guyreuveni33/ToDoApp/assets/116805344/8e5c0371-0bf8-4487-9e55-2360083818bf)
+![image](https://github.com/guyreuveni33/ToDoApp/assets/116805344/8e101cc0-2304-4133-a6ce-fb2967390ecc)
