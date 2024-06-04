@@ -1,7 +1,3 @@
-
-### Server Directory README.md
-
-```markdown
 # Todo-List Server
 
 This is the backend server for the Todo-List application, built with C# and .NET, using MongoDB for data storage. The server provides a RESTful API to manage todo items, allowing clients to create, read, update, and delete tasks.
@@ -40,10 +36,14 @@ To run the server, ensure you have the following installed:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/guyreuveni33/ToDoApp.git
-   cd ToDoApp/server
    ```
 
-2. **Install dependencies**:
+2. **Enter the folder**:
+   ```bash
+   cd ToDoApp/server/WebApplication4
+   ```
+
+3. **Install dependencies**:
    ```bash
    dotnet restore
    ```
@@ -83,6 +83,3 @@ Ensure MongoDB is running and update the connection string in `appsettings.json`
 ## Conclusion
 
 The Todo-List server is a robust backend service that provides essential functionalities for managing todo items. By following the setup instructions, you can easily get the server up and running and integrate it with the Todo-List client for a complete todo management solution.
-```
-
-This README provides a comprehensive guide to setting up and running the server side of your Todo-List application, along with detailed information about its features, technologies used, and configuration.
