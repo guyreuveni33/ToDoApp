@@ -1,38 +1,145 @@
-.App {
+/* App.css */
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Smooth gradient background */
+  font-family: 'Arial', sans-serif; /* Ensures text is readable */
+  color: #333; /* Sets a mild color for text for better readability */
+}
+
+.app-container {
+  width: 50%;
+  margin: 20px auto;
   text-align: center;
+  background-color: #ffffff; /* Light background for the app container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding around the content */
+  border-radius: 8px; /* Rounded corners */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #204056; /* Darker shade for heading */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-section {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  padding: 10px;
+  font-size: 1rem;
+  flex-grow: 1;
+  margin-right: 10px;
+  border: 2px solid #c3cfe2; /* Border color similar to background gradient */
+  border-radius: 4px; /* Rounded corners for input */
+}.add-btn {
+   padding: 5px 10px;
+   background-color: #5c85d6;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+   right: 10px; /* Aligns the button to the far right inside the input section */
+   top: 50%; /* Centers the button vertically */
+   transform: translateY(-50%) translateY(5px); /* First centers, then moves down by 5px */
+
+ }
+
+.delete-btn, .edit-btn {
+  padding: 5px 10px;
+  background-color: #5c85d6; /* A pleasant blue */
   color: white;
+  border: none;
+  border-radius: 4px; /* Rounded corners for buttons */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+
 }
 
-.App-link {
-  color: #61dafb;
+.delete-btn, .edit-btn {
+  padding: 5px 10px;
+  background-color: #5c85d6; /* A pleasant blue */
+  color: white;
+  border: none;
+  border-radius: 4px; /* Rounded corners for buttons */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.add-btn:hover, .delete-btn:hover, .edit-btn:hover {
+  background-color: #4169b3; /* Darker shade of button color on hover */
+}
+
+.list-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  background-color: #f8f9fa;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 4px; /* Rounded corners for list items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06); /* Lighter shadow for list items */
+}
+
+.todo-meta {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date, .time {
+  font-size: 0.75rem;
+  display: block;
+  color: #6c757d;
+  margin-right: 7px;
+}
+
+.task-text {
+  flex-grow: 1;
+  text-align: left;
+  margin-right: 10px; /* Ensures text doesn't touch the meta buttons */
+}
+
+.priority-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .todo-input {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .add-btn {
+    width: 100%;
+    margin-top: 10px;
   }
 }
+
