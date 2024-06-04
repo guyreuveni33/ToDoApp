@@ -1236,11 +1236,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guyha\\Desktop\\ToDoApp\\WebApplication4\\webapplication4\\WebApplication4.csproj",
-      "projectName": "WebApplication4",
-      "projectPath": "C:\\Users\\guyha\\Desktop\\ToDoApp\\WebApplication4\\webapplication4\\WebApplication4.csproj",
+      "projectUniqueName": "C:\\Users\\guyha\\Desktop\\ToDoApp\\WebApplication4\\WebApplication\\WebApplication.csproj",
+      "projectName": "WebApplication",
+      "projectPath": "C:\\Users\\guyha\\Desktop\\ToDoApp\\WebApplication4\\WebApplication\\WebApplication.csproj",
       "packagesPath": "C:\\Users\\guyha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guyha\\Desktop\\ToDoApp\\WebApplication4\\webapplication4\\obj\\",
+      "outputPath": "C:\\Users\\guyha\\Desktop\\ToDoApp\\WebApplication4\\WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1268,11 +1268,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
