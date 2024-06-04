@@ -117,6 +117,7 @@ body {
   margin-right: 10px;
   border-radius: 50%;
   cursor: pointer;
+  flex-shrink: 0; /* Prevents shrinking of the color circle */
 }
 
 @media (max-width: 768px) {
