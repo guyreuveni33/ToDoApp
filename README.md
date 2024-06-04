@@ -64,9 +64,6 @@ A comprehensive Todo-List application with a React frontend and a C# server back
 
 3. Open your browser and navigate to `http://localhost:3000`
 
-   
-![image](https://github.com/guyreuveni33/ToDoApp/assets/116805344/8e101cc0-2304-4133-a6ce-fb2967390ecc)
-
 
 ### UI
 
