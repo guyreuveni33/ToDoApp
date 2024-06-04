@@ -38,13 +38,13 @@ A comprehensive Todo-List application with a React frontend and a C# server back
 
 2. Install client dependencies
     ```sh
-    cd client
+    cd client-side
     npm install
     ```
 
 3. Install server dependencies
     ```sh
-    cd ../server
+    cd ../server-side
     dotnet restore
     ```
 
@@ -52,13 +52,13 @@ A comprehensive Todo-List application with a React frontend and a C# server back
 
 1. Start the backend server
     ```sh
-    cd server
+    cd server-side
     dotnet run
     ```
 
 2. Start the frontend
     ```sh
-    cd ../client
+    cd ../client-side
     npm start
     ```
 
