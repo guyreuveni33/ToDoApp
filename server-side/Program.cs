@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Driver;
+using Microsoft.EntityFrameworkCore;
+using WebApplication4;
+using WebApplication4.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,43 +9,46 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+
+// Add DB Context for MySQL
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), 
+        new MySqlServerVersion(new Version(8, 0, 21)))); // Change this to your MySQL version
+
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(
         builder =>
         {
-            builder.WithOrigins("http://localhost:3000") // Adjust if your React app runs on a different port
+            builder.WithOrigins("http://localhost:3001")
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
 });
 
-builder.Services.AddSingleton<MongoDbContext>();
-var mongoSettings = builder.Configuration.GetSection("MongoSettings");
-builder.Services.AddSingleton<IMongoClient>(serviceProvider =>
-    new MongoClient(mongoSettings["ConnectionString"]));
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.SuppressModelStateInvalidFilter = true;
 });
 
-
 var app = builder.Build();
+
+// Automatically apply any pending migrations or create the database on startup
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    // Apply pending migrations or create the database
+    dbContext.Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
- 
 }
 
- app.UseCors(policy =>
-    policy.WithOrigins("http://localhost:3000") // Adjust the port if your client is running somewhere else
-        .AllowAnyMethod()
-        .AllowAnyHeader());
+app.UseCors();
 app.MapControllers();
- 
-
 app.Run();
- 
