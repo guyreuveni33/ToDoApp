@@ -5,7 +5,7 @@ import {fetchTodos, addTodo, deleteTodo, updateTodo} from './services/todoServic
 function App() {
     const [userInput, setUserInput] = useState("");
     const [todos, setTodos] = useState([]);
-    const colors = ["red", "green", "blue"]; // Example colors
+    const colors = ["red", "green", "orange"]; // Example colors
 
     useEffect(() => {
         const loadTodos = async () => {
